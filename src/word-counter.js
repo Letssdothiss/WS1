@@ -4,6 +4,7 @@
  * @param {string} words The words to count.
  */
 export function countWords(words) {
+  console.log(words)
   words.trim()
 
   // Get last character and index of the given string.

@@ -1,10 +1,14 @@
+// @ts-nocheck
 /**
  * Hello World starter application.
  */
-import { helloWorld } from './hello-world.js'
+// import { helloWorld } from './hello-world.js'
 import { countWords } from './word-counter.js'
+import { Counter } from './counter.js'
 
-let STRING_TO_COUNT_WORDS = "Hej, jag försöker lära mig att programmera. Jag tycker att det är jättekul!"
+const counter = new Counter()
+
+let STRING_TO_COUNT_WORDS = "Hej!"
 
 /**
  * 
@@ -15,4 +19,8 @@ let STRING_TO_COUNT_WORDS = "Hej, jag försöker lära mig att programmera. Jag 
 // If command is entered, display hello world a tihrd time.
 const argumentOrDefault = process.argv[2] ? process.argv[2] : STRING_TO_COUNT_WORDS
 
-console.log(countWords(argumentOrDefault))
+console.log(countWords(""))
+console.log('Word counter:')
+console.log(counter.words('Hej hej . björnar bor i skogen. Korsordtävling. potatis.'))
+console.log('Sentence counter:')
+console.log(counter.sentences('Hej hej. björnar bor i skogen. Korsordtävling. potatis.'))
